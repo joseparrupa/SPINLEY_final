@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - SPINLEY</title>
+    <link rel="icon" href="images/logoBlanco.png" type="image/x-icon"> 
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="top-bar">
+        <p>ENVÍO GRATIS A PARTIR DE COMPRAS SUPERIORES DE 80€</p>
+    </div>
+
+    <header class="header" id="header">
+        <div class="container header-content">
+            <div class="logo-nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logoBlanco.png" width="100px">
+                    </a>
+                </div>
+                <div class="nav-hamburger-wrap">
+                    <button class="nav-hamburger-btn" id="hamburger-menu-btn" aria-label="Abrir menú">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="nav-dropdown" id="nav-dropdown">
+                        <a href="productos.html" class="nav-dropdown-link nav-dropdown-page">PRODUCTOS</a>
+                        <div class="nav-dropdown-divider"></div>
+                        <a href="carrito.html" class="nav-dropdown-link nav-dropdown-page">CARRITO</a>
+                        <div class="nav-dropdown-divider"></div>
+                        <a href="contacto.html" class="nav-dropdown-link nav-dropdown-page">CONTACTO</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-actions">
+                <button class="icon-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                </button>
+                <button class="icon-btn cart-btn" onclick="window.location.href='carrito.html'">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+                <a href="contacto.html" class="btn-contact">CONTACTO</a>
+
+            </div>
+        </div>
+
+
+    </header>
+
+    <section class="contact-hero">
+        <div class="contact-hero-image">
+            <img src="images/FOTO APARTADO EVENTOS .png" alt="Contacta con SPINLEY">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="contact-hero-content">
+            <h1>CONTÁCTA CON NOSOTROS</h1>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-layout">
+                <div class="contact-form-container">
+                    <h2>Envíanos un mensaje</h2>
+                    <p class="form-subtitle">Estamos aquí para ayudarte. Responderemos lo antes posible.</p>
+
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre completo *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Asunto *</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensaje *</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy">He leído y acepto la <a href="privacidad.html" target="_blank" style="color: #9eef6b; text-decoration: underline;">Política de Privacidad</a></label>
+                        </div>
+
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="comercial" name="comercial">
+                            <label for="comercial">Acepto recibir comunicaciones comerciales</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">ENVIAR MENSAJE</button>
+                    </form>
+                </div>
+
+                <div class="contact-info-container">
+                    <div class="contact-info-box">
+                        <h3>Atención al cliente</h3>
+
+                        <div class="info-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9eef6b">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <div>
+                                <strong>Email</strong>
+                                <p>Spinley_ecologic@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9eef6b">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <div>
+                                <strong>Teléfono</strong>
+                                <p>(+34) 670 45 81 23</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9eef6b">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <div>
+                                <strong>Dirección</strong>
+                                <p>Av. Corazón de Jesús, 12600<br>La Vall D'uixó, Castellón</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9eef6b">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <div>
+                                <strong>Horario</strong>
+                                <p>Lunes a viernes<br>9:00 AM - 7:00 PM</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-social">
+                            <h4>Síguenos</h4>
+                            <div class="social-links">
+                                <a href="#" aria-label="Facebook">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                    </svg>
+                                </a>
+                                <a href="#" aria-label="Instagram">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                    </svg>
+                                </a>
+                                <a href="#" aria-label="Twitter">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-map">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Av.+Coraz%C3%B3n+de+Jes%C3%BAs%2C+12600+La+Vall+D%27uix%C3%B3%2C+Castell%C3%B3n%2C+Spain" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="Abrir ubicación en Google Maps">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3071.0!2d-0.2469!3d39.8242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd600f1b0b0b0b0b%3A0x0!2sAv.+Coraz%C3%B3n+de+Jes%C3%BAs%2C+12600+La+Vall+D%27Uix%C3%B3%2C+Castell%C3%B3n!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses"
+                                width="100%"
+                                height="220"
+                                style="border:0; border-radius: 8px; display: block; pointer-events: none;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Ubicación de SPINLEY en Google Maps"
+                            ></iframe>
+                            <div class="map-overlay">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9eef6b">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>Ver en Google Maps</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="images/logoBlanco.png" width="100px">
+                    <p class="footer-description">Una marca que se preocupa por el bienestar social y con el objetivo de incentivar a los usuarios a comprar artículos de ciclismo ecológico.</p>
+                </div>
+
+                <div class="footer-features">
+                    <div class="feature-item">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#9eef6b">
+                            <rect x="1" y="3" width="15" height="13"></rect>
+                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                        </svg>
+                        <h4>ENVÍO EN 5 DÍAS</h4>
+                        <p>Recibe tus productos rápidamente</p>
+                    </div>
+                    <div class="feature-item">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#9eef6b">
+                            <polyline points="23 4 23 10 17 10"></polyline>
+                            <polyline points="1 20 1 14 7 14"></polyline>
+                            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                        </svg>
+                        <h4>HASTA 30 DÍAS PARA DEVOLUCIONES</h4>
+                        <p>Devoluciones fáciles y gratuitas</p>
+                    </div>
+                    <div class="feature-item">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#9eef6b">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                        </svg>
+                        <h4>SERVICIO DE REPARACIONES</h4>
+                        <p>Mantenimiento y reparación de productos</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-middle">
+                <div class="footer-links">
+                    <a href="privacidad.html">Política de privacidad</a>
+                    <a href="aviso-legal.html">Aviso legal</a>
+                    <a href="sobre-nosotros.html">Sobre nosotros</a>
+                    <a href="envio.html">Política de envío</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 SPINLEY. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

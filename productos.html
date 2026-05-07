@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - SPINLEY</title>
+    <link rel="icon" href="images/logoBlanco.png" type="image/x-icon"> 
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="top-bar">
+        <p>ENVÍO GRATIS A PARTIR DE COMPRAS SUPERIORES DE 80€</p>
+    </div>
+
+    <header class="header" id="header">
+        <div class="container header-content">
+            <div class="logo-nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logoBlanco.png" width="100px">
+                    </a>
+                </div>
+                <div class="nav-hamburger-wrap">
+                    <button class="nav-hamburger-btn" id="hamburger-menu-btn" aria-label="Abrir menú">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="nav-dropdown" id="nav-dropdown">
+                        <a href="productos.html" class="nav-dropdown-link nav-dropdown-page">PRODUCTOS</a>
+                        <div class="nav-dropdown-divider"></div>
+                        <a href="carrito.html" class="nav-dropdown-link nav-dropdown-page">CARRITO</a>
+                        <div class="nav-dropdown-divider"></div>
+                        <a href="contacto.html" class="nav-dropdown-link nav-dropdown-page">CONTACTO</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-search">
+                <input type="text" placeholder="Buscar productos..." class="search-input" id="search-input">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="cursor: pointer;">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+            </div>
+
+            <div class="header-actions">
+                <button class="icon-btn search-btn-mobile" id="search-toggle-btn" aria-label="Buscar">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                <button class="icon-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                </button>
+                <button class="icon-btn cart-btn" onclick="window.location.href='carrito.html'">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+                <a href="contacto.html" class="btn-contact">CONTACTO</a>
+
+            </div>
+        </div>
+
+
+    </header>
+
+    <section class="catalog-hero">
+        <div class="catalog-hero-image">
+            <img src="images/FOTO APARTADO EVENTOS .png" alt="Colección SPINLEY">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="catalog-hero-content">
+            <h1>COLECCIÓN SPINLEY</h1>
+            <p>Ropa y accesorios premium para ciclistas exigentes</p>
+        </div>
+    </section>
+
+    <section class="catalog-section">
+        <div class="container">
+            <div class="catalog-controls">
+                <div class="filters">
+                    <select id="category-filter" class="filter-select">
+                        <option value="">Todas las categorías</option>
+                        <option value="maillots">Maillots</option>
+                        <option value="cascos">Cascos</option>
+                        <option value="guantes">Guantes</option>
+                        <option value="zapatillas">Zapatillas</option>
+                        <option value="calcetines">Calcetines</option>
+                        <option value="accesorios">Accesorios</option>
+                    </select>
+
+                    <select id="gender-filter" class="filter-select">
+                        <option value="">Género</option>
+                        <option value="hombre">Hombre</option>
+                        <option value="mujer">Mujer</option>
+                        <option value="unisex">Unisex</option>
+                    </select>
+
+                    <select id="sort-filter" class="filter-select">
+                        <option value="featured">Destacados</option>
+                        <option value="price-asc">Precio: menor a mayor</option>
+                        <option value="price-desc">Precio: mayor a menor</option>
+                        <option value="newest">Novedades</option>
+                    </select>
+                </div>
+
+                <p class="results-count" id="results-count">Mostrando 14 productos</p>
+            </div>
+
+            <div class="catalog-grid" id="catalog-grid">
+                <div class="product-card-catalog" data-category="maillots" data-gender="hombre" data-price="79.99" data-new="true">
+                    <div class="product-image-catalog">
+                        <a href="producto.html?id=1"><img src="images/FOTO MAILLOT ROJO .png" alt="Maillot Blend 1.0"></a>
+                        <span class="badge badge-new">NUEVO</span>
+                        <button class="quick-add" onclick="addToCartQuick(1, 'MAILLOT BLEND 1.0', 79.99)">Añadir al carrito</button>
+                    </div>
+                    <div class="product-info-catalog">
+                        <p class="product-category-small">Long Sleeve Jersey</p>
+                        <h3 class="product-name-catalog"><a href="producto.html?id=1">MAILLOT BLEND 1.0</a></h3>
+                        <p class="product-price-catalog">79,99€</p>
+                        <button class="btn-small" onclick="window.location.href='producto.html?id=1'">Ver producto</button>
+                    </div>
+                </div>
+
+                <div class="product-card-catalog" data-category="maillots" data-gender="hombre" data-price="89.99">
+                    <div class="product-image-catalog">
+                        <a href="producto.html?id=2"><img src="images/FOTO MODELO MAILLOT VERDE .png" alt="Maillot Aero Pro"></a>
+                        <span class="badge badge-top">TOP VENTAS</span>
+                        <button class="quick-add" onclick="addToCartQuick(2, 'MAILLOT AERO PRO', 89.99)">Añadir al carrito</button>
+                    </div>
+                    <div class="product-info-catalog">
+                        <p class="product-category-small">Performance Jersey</p>
+                        <h3 class="product-name-catalog"><a href="producto.html?id=2">MAILLOT AERO PRO</a></h3>
+                        <p class="product-price-catalog">89,99€</p>
+                        <button class="btn-small" onclick="window.location.href='producto.html?id=2'">Ver producto</button>
+                    </div>
+                </div>
+
+                <div class="product-card-catalog" data-category="maillots" data-gender="unisex" data-price="74.99">
+                    <div class="product-image-catalog">
+                        <a href="producto.html?id=3"><img src="images/FOTO MODELO MAILLOT AZUL.png" alt="Maillot Trail"></a>
+                        <button class="quick-add" onclick="addToCartQuick(3, 'MAILLOT TRAIL MOUNTAIN', 74.99)">Añadir al carrito</button>
+                    </div>
+                    <div class="product-info-catalog">
+                        <p class="product-category-small">MTB Jersey</p>
+                        <h3 class="product-name-catalog"><a href="producto.html?id=3">MAILLOT TRAIL MOUNTAIN</a></h3>
+                        <p class="product-price-catalog">74,99€</p>
+                        <button class="btn-small" onclick="window.location.href='producto.html?id=3'">Ver producto</button>
+                    </div>
+                </div>
+
+                <div class="product-card-catalog" data-category="cascos" data-gender="unisex" data-price="149.99">
+                    <div class="product-image-catalog">
+                        <a href="producto.html?id=4"><img src="images/CASCO 1.png" alt="Casco Aero Road"></a>
+                        <button class="quick-add" onclick="addToCartQuick(4, 'CASCO AERO ROAD', 149.99)">Añadir al carrito</button>
+                    </div>
+                    <div class="product-info-catalog">
+                        <p class="product-category-small">Cascos</p>
+                        <h3 class="product-name-catalog"><a href="producto.html?id=4">CASCO AERO ROAD</a></h3>
+                        <p class="product-price-catalog">149,99€</p>
+                        <button class="btn-small" onclick="window.location.href='producto.html?id=4'">Ver producto</button>
+                    </div>
+                </div>
+
+                <div class="product-card-catalog" data-category="cascos" data-gender="unisex" data-price="129.99" data-new="true">
+                    <div class="product-image-catalog">
+                        <a href="producto.html?id=5"><img src="images/CASCO.png" alt="Casco Performance"></a>
+                        <span class="badge badge-new">NUEVO</span>
+                        <button class="quick-add" onclick="addToCartQuick(5, 'CASCO PERFORMANCE', 129.99)">Añadir al carrito</button>
+                    </div>
+                    <div class="product-info-catalog">
+                        <p class="product-category-small">Cascos</p>
+                        <h3 class="product-name-catalog"><a href="producto.html?id=5">CASCO PERFORMANCE</a></h3>
+                        <p class="product-price-catalog">129,99€</p>
+                        <button class="btn-small" onclick="window.location.href='producto.html?id=5'">Ver producto</button>
+                    </div>
+                </div>
+
+                <div class="product-card-catalog" data-category="cascos" data-gender="unisex" data-price="139.99">
+                    <div class="product-image-catalog">
+                        <a href="producto.html?id=6"><img src="images/CASCO 3.png" alt="Casco MTB Pro"></a>
+                        <button class="quick-add" onclick="addToCartQuick(6, 'CASCO MTB PRO', 139.99)">Añadir al carrito</button>
+                    </div>
+                    <div class="product-info-catalog">
+                        <p class="product-category-small">Cascos</p>
+                        <h3 class="product-name-catalog"><a href="producto.html?id=6">CASCO MTB PRO</a></h3>
+                        <p class="product-price-catalog">139,99€</p>
+                        <button class="btn-small" onclick="window.location.href='producto.html?id=6'">Ver producto</button>
+                    </div>
+                </div>
+
+                <div class="product-card-catalog" data-category="accesorios" data-gender="unisex" data-price="294.99">
+                    <div class="product-image-catalog">
+                        <a href="producto.html?id=7"><img src="images/RELOJ SPINLEY.png" alt="Reloj Spinley"></a>
+                        <button class="quick-add" onclick="addToCartQuick(7, 'RELOJ SPINLEY', 294.99)">Añadir al carrito</button>
+                    </div>
+                    <div class="product-info-catalog">
+                        <p class="product-category-small">Accesorios</p>
+                        <h3 class="product-name-catalog"><a href="producto.html?id=7">RELOJ SPINLEY</a></h3>
+                        <p class="product-price-catalog">294,99€</p>
+                        <button class="btn-small" onclick="window.location.href='producto.html?id=7'">Ver producto</button>
+                    </div>
+                </div>
+
+                <div class="product-card-catalog" data-category="calcetines" data-gender="unisex" data-price="19.99">
+                    <div class="product-image-catalog">
+                        <a href="producto.html?id=8"><img src="images/CALCETINES 1.png" alt="Calcetines Performance"></a>
+                        <button class="quick-add" onclick="addToCartQuick(8, 'CALCETINES PERFORMANCE', 19.99)">Añadir al carrito</button>
+                    </div>
+                    <div class="product-info-catalog">
+                        <p class="product-category-small">Calcetines</p>
+                        <h3 class="product-name-catalog"><a href="producto.html?id=8">CALCETINES PERFORMANCE</a></h3>
+                        <p class="product-price-catalog">19,99€</p>
+                        <button class="btn-small" onclick="window.location.href='producto.html?id=8'">Ver producto</button>
+                    </div>
+                </div>
+
+                <div class="product-card-catalog" data-category="zapatillas" data-gender="unisex" data-price="199.99">
+                    <div class="product-image-catalog">
+                        <a href="producto.html?id=9"><img src="images/ZAPATILLAS SPINLE.png" alt="Zapatillas Carbon Road"></a>
+                        <span class="badge badge-top">TOP VENTAS</span>
+                        <button class="quick-add" onclick="addToCartQuick(9, 'ZAPATILLAS CARBON ROAD', 199.99)">Añadir al carrito</button>
+                    </div>
+                    <div class="product-info-catalog">
+                        <p class="product-category-small">Zapatillas</p>
+                        <h3 class="product-name-catalog"><a href="producto.html?id=9">ZAPATILLAS CARBON ROAD</a></h3>
+                        <p class="product-price-catalog">199,99€</p>
+                        <button class="btn-small" onclick="window.location.href='producto.html?id=9'">Ver producto</button>
+                    </div>
+                </div>
+
+                <div class="product-card-catalog" data-category="accesorios" data-gender="unisex" data-price="14.99">
+                    <div class="product-image-catalog">
+                        <a href="producto.html?id=10"><img src="images/BOTELLIN SPINLEY (1).png" alt="Bidón Eco"></a>
+                        <button class="quick-add" onclick="addToCartQuick(10, 'BIDÓN ECO 750ML', 14.99)">Añadir al carrito</button>
+                    </div>
+                    <div class="product-info-catalog">
+                        <p class="product-category-small">Accesorios</p>
+                        <h3 class="product-name-catalog"><a href="producto.html?id=10">BIDÓN ECO 750ML</a></h3>
+                        <p class="product-price-catalog">14,99€</p>
+                        <button class="btn-small" onclick="window.location.href='producto.html?id=10'">Ver producto</button>
+                    </div>
+                </div>
+
+                <div class="product-card-catalog" data-category="calcetines" data-gender="unisex" data-price="24.99">
+                    <div class="product-image-catalog">
+                        <a href="producto.html?id=12"><img src="images/CALCETINES 2.png" alt="Calcetines Eco"></a>
+                        <button class="quick-add" onclick="addToCartQuick(12, 'CALCETINES ECO', 24.99)">Añadir al carrito</button>
+                    </div>
+                    <div class="product-info-catalog">
+                        <p class="product-category-small">Calcetines</p>
+                        <h3 class="product-name-catalog"><a href="producto.html?id=12">CALCETINES ECO</a></h3>
+                        <p class="product-price-catalog">24,99€</p>
+                        <button class="btn-small" onclick="window.location.href='producto.html?id=12'">Ver producto</button>
+                    </div>
+                </div>
+
+                <div class="product-card-catalog" data-category="cascos" data-gender="unisex" data-price="119.99" data-new="true">
+                    <div class="product-image-catalog">
+                        <a href="producto.html?id=13"><img src="images/CASCO 2.png" alt="Casco Urban Lite"></a>
+                        <span class="badge badge-new">NUEVO</span>
+                        <button class="quick-add" onclick="addToCartQuick(13, 'CASCO URBAN LITE', 119.99)">Añadir al carrito</button>
+                    </div>
+                    <div class="product-info-catalog">
+                        <p class="product-category-small">Cascos</p>
+                        <h3 class="product-name-catalog"><a href="producto.html?id=13">CASCO URBAN LITE</a></h3>
+                        <p class="product-price-catalog">119,99€</p>
+                        <button class="btn-small" onclick="window.location.href='producto.html?id=13'">Ver producto</button>
+                    </div>
+                </div>
+
+                <div class="product-card-catalog" data-category="cascos" data-gender="unisex" data-price="159.99">
+                    <div class="product-image-catalog">
+                        <a href="producto.html?id=14"><img src="images/CASCO 4.png" alt="Casco Enduro Extreme"></a>
+                        <span class="badge badge-top">TOP VENTAS</span>
+                        <button class="quick-add" onclick="addToCartQuick(14, 'CASCO ENDURO EXTREME', 159.99)">Añadir al carrito</button>
+                    </div>
+                    <div class="product-info-catalog">
+                        <p class="product-category-small">Cascos</p>
+                        <h3 class="product-name-catalog"><a href="producto.html?id=14">CASCO ENDURO EXTREME</a></h3>
+                        <p class="product-price-catalog">159,99€</p>
+                        <button class="btn-small" onclick="window.location.href='producto.html?id=14'">Ver producto</button>
+                    </div>
+                </div>
+
+                <div class="product-card-catalog" data-category="accesorios" data-gender="unisex" data-price="17.99">
+                    <div class="product-image-catalog">
+                        <a href="producto.html?id=15"><img src="images/BOTELLIN SPINLEY (2).png" alt="Bidon Pro"></a>
+                        <button class="quick-add" onclick="addToCartQuick(15, 'BIDÓN PRO 750ML', 17.99)">Añadir al carrito</button>
+                    </div>
+                    <div class="product-info-catalog">
+                        <p class="product-category-small">Accesorios</p>
+                        <h3 class="product-name-catalog"><a href="producto.html?id=15">BIDÓN PRO 750ML</a></h3>
+                        <p class="product-price-catalog">17,99€</p>
+                        <button class="btn-small" onclick="window.location.href='producto.html?id=15'">Ver producto</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="images/logoBlanco.png" width="100px">
+                    <p class="footer-description">Una marca que se preocupa por el bienestar social y con el objetivo de incentivar a los usuarios a comprar artículos de ciclismo ecológico.</p>
+                </div>
+
+                <div class="footer-features">
+                    <div class="feature-item">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#9eef6b">
+                            <rect x="1" y="3" width="15" height="13"></rect>
+                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                        </svg>
+                        <h4>ENVÍO EN 5 DÍAS</h4>
+                        <p>Recibe tus productos rápidamente</p>
+                    </div>
+                    <div class="feature-item">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#9eef6b">
+                            <polyline points="23 4 23 10 17 10"></polyline>
+                            <polyline points="1 20 1 14 7 14"></polyline>
+                            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                        </svg>
+                        <h4>HASTA 30 DÍAS PARA DEVOLUCIONES</h4>
+                        <p>Devoluciones fáciles y gratuitas</p>
+                    </div>
+                    <div class="feature-item">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#9eef6b">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                        </svg>
+                        <h4>SERVICIO DE REPARACIONES</h4>
+                        <p>Mantenimiento y reparación de productos</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-middle">
+                <div class="footer-links">
+                  <a href="privacidad.html">Política de privacidad</a>
+                  <a href="aviso-legal.html">Aviso legal</a>
+                  <a href="sobre-nosotros.html">Sobre nosotros</a>
+                  <a href="envio.html">Política de envío</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 SPINLEY. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
